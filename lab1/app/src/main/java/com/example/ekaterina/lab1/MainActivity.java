@@ -16,13 +16,14 @@ import java.security.acl.Permission;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
+
     private TextView Tv;
     private Button Btn;
     private TextView Msg;
 
     //@SdkConstant(SdkConstantType.ACTIVITY_INTENT_ACTION)
-    @RequiresPermission(Manifest.permission.CALL_PHONE)
-    public static final String ACTION_CALL = "android.intent.action.CALL";
+   // @RequiresPermission(Manifest.permission.CALL_PHONE)
+    //public static final String ACTION_CALL = "android.intent.action.CALL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.textView12: {
-                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getString(R.string.pnumber)));
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.pnumber)));
                     startActivity(intent);
                     break;
                 }
 
                 case R.id.button2: {
-                    Intent intent1 = new Intent(Intent.ACTION_CALL);/*,Uri.parse("tel:" + getString(R.string.pnumber)));*/
-                    intent1.setData(Uri.parse("tel:" + getString(R.string.pnumber)));
+                    Intent intent1 = new Intent(Intent.ACTION_CALL);
+                    intent1.setData(Uri.parse("tel:" + getResources().getString(R.string.pnumber)));
                     startActivity(intent1);
                     break;
                 }

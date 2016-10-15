@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">lab1</string>
-    <string name="pnumber" />
-    <string name="gmail" />
-    <string name="tema" />
-    <string name="txt" />
+    <string name="pnumber">+79102343867</string>
+    <string name="gmail">kat032@mail.ru</string>
+    <string name="tema">lab1</string>
+    <string name="txt"/>
 </resources>
